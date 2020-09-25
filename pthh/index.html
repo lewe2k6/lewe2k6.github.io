@@ -117,16 +117,13 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
-
         </div>
         <!-- /.container-fluid -->
 <div class="container">
   <center><h3>Cân bằng phương trình hóa học</h3></center>
 <form action="#" method="get" onsubmit="doBalance(); return false;">
 <span style="width:99%; display:flex; flex-direction:row">
-<input type="text" id="inputFormula" class="form-control" autocomplete="off" value="H^+ + CO3^2- = H2O + CO2" placeholder="Nhập phương trình cần cân bằng vào đây"/>
+<input type="text" id="inputFormula" class="form-control" autocomplete="off" placeholder="Nhập phương trình cần cân bằng vào đây"/>
 <input type="submit" id="xuatkq" class="btn btn-success" value="Cân bằng">
 <input type="button" class="btn btn-success" value="Ngẫu nhiên" onclick="doRandom();" style="margin-left:0.3em"/></span>
 <span id="balanced" style="font-family:serif; font-size:150%; line-height:1.6;"></span><span id="message"></span>
@@ -818,6 +815,20 @@ if (!("from" in Array)) {
 </script>
 </div>
       </div>
+      <br>
+      <div class="card-content">
+              <center><h3 class="title">Hướng dẫn</h3></center>
+                <div class="description">
+                  <h4 class="info-title">Quy ước khi nhập phương trình</h4>
+                    • Các chỉ số được viết ngay bên cạnh kí hiệu hóa học ( CO2, H2O, ... )<br>
+  • Các hợp chất hữu cơ nên viết ở dạng công thức phân phân tử ( CH3COOH, C2H2, C6H6, ... )<br>
+  • Các kí tự có thể viết rời nhau ( C O 2, H 2 O, ... )<br>
+  • Toàn bộ kí hiệu sử dụng là ngoặc đơn ( [Ag(CH3)2]OH  viết thành (Ag(CH3)2)OH )<br>
+  • Mũi tên được thay thế bằng dấu "=" <br>
+  • Số ion được viết sau dấu "^" ( H^+ ) <br>
+  • Lưu ý các kí hiệu hóa học phân biệt HOA và thường
+                </div>
+                 </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
