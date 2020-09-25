@@ -9,7 +9,7 @@
   <meta name="description" content="Cân bằng PTHH">
   <meta name="author" content="Lewe">
 
-  <title>Giải định lí Pytago</title>
+  <title>Cân bằng PTHH</title>
 
   <!-- Custom fonts for this template-->
   <link href="https://lewe2k6.github.io/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,9 +17,9 @@
 
   <!-- Custom styles for this template-->
   <link href="https://lewe2k6.github.io/css/sb-admin-2.min.css" rel="stylesheet">
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 
 </head>
 
@@ -116,13 +116,13 @@
           </ul>
 
         </nav>
-    </div>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
 <div class="container">
-  <center>  <h3 class="mb-0 card-title"><font style="color:red">*Chú ý:</font> Chữ x vui lòng viết thường. Nếu viết X hoa thì sẽ không tính được.</h3></center>
+    <br />
+                                   <center>  <h3 class="mb-0 card-title"><font style="color:red">*Chú ý:</font> Chữ x vui lòng viết thường. Nếu viết X hoa thì sẽ không tính được.</h3></center>
                                     <div class="card-body">
                                             <center>    <div class="form-group">
                                                     <label class="form-label">Độ dài cạnh huyền</label>
@@ -145,7 +145,7 @@
    <div id="layketqua"></div>
               <div id="debai"></div>
              <div id="ketqua"></div>
-                </div></div></div></div>
+                </div></div>
 <script>
     $("#pytago").click(function(){
   var canhhuyen = $("#canhhuyen").val();
@@ -179,7 +179,8 @@ if (canhgocvuong1 > canhhuyen){
             document.getElementById("ketqua").innerHTML = "Xét tam giác XYZ vuông tại X : <br>Theo định lý Pytago ta có: <br/> YZ" + "2".sup() + " = " + "XY" + "2".sup() + " + " + "XZ" + "2".sup() + "<br/>" + canhhuyen + "2".sup() + " = " + canhgocvuong2 + "2".sup() + " + " + canhgocvuong1 + "2".sup() + "<br/> " + canhhuyenbinhphuong + " = " + "x" + "2".sup() + " + " + canhgocvuong1**2 + "<br/> x" + "2".sup() + " = "+ pheptinh + "<br/>=> x = " + Math.sqrt(pheptinhs).toFixed(1) + "<br/>*Vậy XZ = " + Math.sqrt(pheptinhs).toFixed(1);
 } else { alert("Không hợp lệ, nếu chỉ cho một cạnh duy nhất thì phải áp dụng hệ thức hoặc Sin Cos Tan để tính (học ở lớp 9), trường hợp không cho cạnh nào thì không thể áp dụng định lý pytago.")}
 });
-</script> <!-- End of Main Content -->
+</script><br>
+      </div> <!-- End of Main Content -->
 
         </div>
         <!-- /.container-fluid -->
