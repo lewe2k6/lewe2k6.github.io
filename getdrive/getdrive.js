@@ -27,7 +27,7 @@
         icon: 'glyphicon glyphicon-ok-circle',
         title: 'Đã copy',
         message: e.text,
-        url: e.text,
+        target: '_blank'
       }, {
         // settings
         type: "success",
