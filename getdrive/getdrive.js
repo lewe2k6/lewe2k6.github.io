@@ -25,9 +25,9 @@
     clipboard.on('success', function(e) {
       $.notify({
         icon: 'glyphicon glyphicon-ok-circle',
-        title: 'Copied',
+        title: 'Đã copy',
         message: '',
-        url: '',
+        url: e.text,
         target: '_blank'
       }, {
         // settings
