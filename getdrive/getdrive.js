@@ -26,7 +26,7 @@
       $.notify({
         icon: 'glyphicon glyphicon-ok-circle',
         title: 'Copied',
-        message: e.text,
+        message: '',
         url: '',
         target: '_blank'
       }, {
