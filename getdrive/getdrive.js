@@ -3,6 +3,7 @@
     var $shareLink = $('#sharelink'),
       $downloadLink = $('#downloadlink'),
       $copyButton = $('#copylinkbtn'),
+      $download = $('#download'),
       clipboard;
 
     $shareLink.on('keyup paste', function() {
@@ -36,10 +37,6 @@
           from: "top",
           align: "center"
         }
-      });
-
-      $('#download').click(function() {
-        window.location='downloadlink';
       });
       // $.notify(e.text + " copied to clipboard.");
 
