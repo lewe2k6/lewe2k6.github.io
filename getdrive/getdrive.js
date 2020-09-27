@@ -26,9 +26,9 @@
       $.notify({
         icon: 'glyphicon glyphicon-ok-circle',
         title: 'Đã copy',
-        message: '',
+        message: e.text,
         url: e.text,
-        target: '_blank'
+        target: '#'
       }, {
         // settings
         type: "success",
