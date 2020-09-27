@@ -24,10 +24,12 @@
 
     clipboard = new Clipboard('#copylinkbtn');
     clipboard.on('success', function(e) {
-      
-
       e.clearSelection();
     });
-
+    $downloadButton.on('click', function(){
+        title: Download,
+        url: e.text
+        target: '_blank'
+      });
   });
 })(jQuery);
