@@ -3,6 +3,7 @@
     var $shareLink = $('#sharelink'),
       $downloadLink = $('#downloadlink'),
       $copyButton = $('#copylinkbtn'),
+      $downloadButton = $('#downloadbtn'),
       clipboard;
 
     $shareLink.on('keyup paste', function() {
@@ -11,9 +12,11 @@
       if(l !== link) {
         $downloadLink.val(l);
         $copyButton.removeAttr('disabled');
+        $downloadButton.removeAttr('disabled');
       } else {
         $downloadLink.val('');
         $copyButton.attr('disabled', 'disabled');
+        $downloadButton.attr('disabled', 'disabled');
       }
     });
 
@@ -29,4 +32,8 @@
 
       e.clearSelection();
     });
+    $downloadButton.on('click', function() {
+      window.open(e.text)
+    })
+  });
 })(jQuery);
