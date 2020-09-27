@@ -23,14 +23,14 @@
     $downloadLink.on('click', function() {
       $downloadLink.select();
     });
-    
-    $downloadButton.on('click', function() {
-      $(location).href('downloadLink');
-    });
+
 
     clipboard = new Clipboard('#copylinkbtn');
     clipboard.on('success', function(e) {
       
+    $downloadButton.on('click', function(e) {
+      $(location).href('downloadLink');
+    });
 
       // $.notify(e.text + " copied to clipboard.");
 
