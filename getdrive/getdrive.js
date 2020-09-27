@@ -32,7 +32,7 @@
 
     $downloadButton.on('click', function() {
       $(location).href('downloadLink');
-    })
+    });
       e.clearSelection();
     });
   });
