@@ -34,7 +34,7 @@
     });
     $downloadButton.on('click', function(e) {
       $downloadLink.select();
-      $(location).href('#downloadlink')
+      $(location).href('#downloadlink');
       e.clearSelection();
     })
   });
