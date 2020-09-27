@@ -3,7 +3,7 @@
     var $shareLink = $('#sharelink'),
       $downloadLink = $('#downloadlink'),
       $copyButton = $('#copylinkbtn'),
-      $downloadButton = $('#downloadbtn')
+      $downloadButton = $('#downloadbtn'),
       clipboard;
 
     $shareLink.on('keyup paste', function() {
