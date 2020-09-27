@@ -137,7 +137,7 @@
             <input type="url" class="form-control" id="downloadlink" readonly>
             <span class="input-group-btn">
       &ensp;
-        <button id="downloadbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink" disabled>Download</button>
+        <a window.location.href = downloadlink><button id="downloadbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink" disabled>Download</button></a>
       <button id="copylinkbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink"  disabled>Copy link</button>
 
       </span>
@@ -150,6 +150,52 @@
 </div>
         </div>
         <!-- /.container-fluid -->
+
+
+  <script>
+    function get() {
+          window.location.href = sharelink;
+        //}
+      };
+  </script>
+
+  <script>
+        var $parent, $button, $keyword;
+
+        $(document).ready(function() {
+
+      $('.mobile-toggle').click(function() {
+        $('.nav-bar').toggleClass('nav-open');
+        $(this).toggleClass('active');
+      });
+
+            $('.background-image-holder').each(function() {
+                var imgSrc = $(this).children('img').attr('src');
+                $(this).css('background', 'url("' + imgSrc + '")');
+                $(this).children('img').hide();
+                $(this).css('background-position', 'initial');
+            });
+
+            // Fade in background images
+
+            setTimeout(function() {
+                $('.background-image-holder').each(function() {
+                    $(this).addClass('fadeIn');
+                });
+            }, 200);
+
+            $parent = $("div.grid");
+            $button = $("button");
+            $keyword = $("input");
+
+            $parent.masonry({
+                itemSelector: '.grid-item',
+                gutter: 20
+            });
+
+      $('#linkget').focus();
+        });
+    </script>
 <br>
 <br>
 <br>
