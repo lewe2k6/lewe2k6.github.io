@@ -31,7 +31,6 @@
       // $.notify(e.text + " copied to clipboard.");
 
     $downloadButton.on('click', function(e) {
-      $downloadLink.select();
       $(location).href('#downloadlink');
     })
       e.clearSelection();
