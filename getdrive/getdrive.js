@@ -40,7 +40,7 @@
       });
 
       $downloadButton.on('click', function() {
-        location.href='#copylinkbtn';
+        location.href=('#downloadbtn');
       });
       // $.notify(e.text + " copied to clipboard.");
 
