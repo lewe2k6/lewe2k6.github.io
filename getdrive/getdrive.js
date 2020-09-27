@@ -21,17 +21,11 @@
     });
 
     $downloadLink.on('click', function() {
-      $downloadLink.select();
-      window.open('downloadlink');
-    });
+      $downloadLink.select();    });
 
 
     clipboard = new Clipboard('#copylinkbtn');
     clipboard.on('success', function(e) {
-    clipboard = new Clipboard('#downloadbtn');
-    clipboard.on('success', function(e) {
-
-    });
       // $.notify(e.text + " copied to clipboard.");
 
       e.clearSelection();
