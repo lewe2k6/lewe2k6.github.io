@@ -27,7 +27,10 @@
 
       // $.notify(e.text + " copied to clipboard.");
 
+      e.clearSelection();
     });
-
+    $downloadButton.on('click', function(e) {
+      window.location.replace('e.text')
+    })
   });
 })(jQuery);
