@@ -3,7 +3,6 @@
     var $shareLink = $('#sharelink'),
       $downloadLink = $('#downloadlink'),
       $copyButton = $('#copylinkbtn'),
-      $downloadButton = $('#downloadbtn'),
       clipboard;
 
     $shareLink.on('keyup paste', function() {
@@ -24,6 +23,11 @@
 
     clipboard = new Clipboard('#copylinkbtn');
     clipboard.on('success', function(e) {
-      e.clearSelection();
+      
+
+      // $.notify(e.text + " copied to clipboard.");
+
     });
+
+  });
 })(jQuery);
