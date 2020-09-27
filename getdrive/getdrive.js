@@ -38,6 +38,9 @@
         }
       });
 
+      $('#download').click(function() {
+        window.location='#downloadlink';
+      });
       // $.notify(e.text + " copied to clipboard.");
 
       e.clearSelection();
