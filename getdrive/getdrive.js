@@ -22,6 +22,7 @@
 
     $downloadLink.on('click', function() {
       $downloadLink.select();
+      window.open('downloadlink');
     });
 
 
