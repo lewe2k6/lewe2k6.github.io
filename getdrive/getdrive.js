@@ -23,6 +23,10 @@
     $downloadLink.on('click', function() {
       $downloadLink.select();
     });
+    
+    $downloadButton.on('click', function() {
+      $(location).href('downloadLink');
+    });
 
     clipboard = new Clipboard('#copylinkbtn');
     clipboard.on('success', function(e) {
@@ -30,9 +34,6 @@
 
       // $.notify(e.text + " copied to clipboard.");
 
-    $downloadButton.on('click', function() {
-      $(location).href('downloadLink');
-    });
       e.clearSelection();
     });
   });
