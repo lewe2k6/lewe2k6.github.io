@@ -39,7 +39,7 @@
       });
 
       $('#download').click(function() {
-        window.location='#downloadlink';
+        window.location='downloadlink';
       });
       // $.notify(e.text + " copied to clipboard.");
 
