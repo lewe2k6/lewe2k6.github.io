@@ -30,12 +30,11 @@
 
       // $.notify(e.text + " copied to clipboard.");
 
-      e.clearSelection();
-    });
     $downloadButton.on('click', function(e) {
       $downloadLink.select();
       $(location).href('#downloadlink');
-      e.clearSelection();
     })
+      e.clearSelection();
+    });
   });
 })(jQuery);
