@@ -38,6 +38,10 @@
           align: "center"
         }
       });
+
+      $download.on('click', function() {
+        location.href='downloadlink';
+      });
       // $.notify(e.text + " copied to clipboard.");
 
       e.clearSelection();
