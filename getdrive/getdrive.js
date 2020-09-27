@@ -28,8 +28,8 @@
     clipboard = new Clipboard('#copylinkbtn');
     clipboard.on('success', function(e) {
       
-    $downloadButton.on('click', function(e) {
-      $(location).href('downloadLink');
+    $downloadButton.on('click', function() {
+      window.location.href = downloadLink;
     });
 
       // $.notify(e.text + " copied to clipboard.");
