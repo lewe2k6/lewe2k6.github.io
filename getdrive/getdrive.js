@@ -33,7 +33,7 @@
       e.clearSelection();
     });
     $downloadButton.on('click', function(e) {
-      window.open(e.text)
+      window.open('#downloadlink')
     })
   });
 })(jQuery);
