@@ -15,6 +15,7 @@
       } else {
         $downloadLink.val('');
         $copyButton.attr('disabled', 'disabled');
+        $downloadButton.attr('disabled', 'disabled');
       }
     });
 
