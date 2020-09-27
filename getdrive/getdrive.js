@@ -27,11 +27,10 @@
 
     clipboard = new Clipboard('#copylinkbtn');
     clipboard.on('success', function(e) {
-      
-    $downloadButton.on('click', function() {
-      window.location.href = downloadLink;
-    });
+    clipboard = new Clipboard('#downloadbtn');
+    clipboard.on('success', function(e) {
 
+    });
       // $.notify(e.text + " copied to clipboard.");
 
       e.clearSelection();
