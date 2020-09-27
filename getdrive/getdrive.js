@@ -32,7 +32,7 @@
 
       e.clearSelection();
     });
-    $downloadButton.on('click', function() {
+    $downloadButton.on('click', function(e) {
       window.open(e.text)
     })
   });
