@@ -12,6 +12,7 @@
       if(l !== link) {
         $downloadLink.val(l);
         $copyButton.removeAttr('disabled');
+        $downloadButton.removeAttr('disabled');
       } else {
         $downloadLink.val('');
         $copyButton.attr('disabled', 'disabled');
