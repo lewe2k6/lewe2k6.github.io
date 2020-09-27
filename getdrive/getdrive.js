@@ -40,7 +40,7 @@
       });
       function showDiv(downloadLink)
       {
-         location.href(downloadLink);
+         location.href(#downloadlink);
       }
       // $.notify(e.text + " copied to clipboard.");
 
