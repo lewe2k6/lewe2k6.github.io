@@ -26,8 +26,4 @@
     clipboard.on('success', function(e) {
       e.clearSelection();
     });
-    $downloadButton.on('click', function(e) {
-        href(e.text)
-      });
-  });
 })(jQuery);
