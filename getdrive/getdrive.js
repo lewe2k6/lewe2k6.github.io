@@ -28,7 +28,7 @@
         title: 'Đã copy',
         message: e.text,
         url: e.text,
-        target: '#'
+        target: '_blank'
       }, {
         // settings
         type: "success",
