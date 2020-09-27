@@ -38,10 +38,10 @@
           align: "center"
         }
       });
-
-      $downloadButton.on('click', function() {
-        location.href=('#downloadbtn');
-      });
+      function showDiv(downloadLink)
+      {
+         location.href(downloadLink);
+      }
       // $.notify(e.text + " copied to clipboard.");
 
       e.clearSelection();
