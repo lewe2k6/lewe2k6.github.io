@@ -120,7 +120,9 @@
 
         </nav>
         <!-- End of Topbar -->
-
+                                <td><?php
+                                    $downloadUrl = $downloadLink;
+                                ?>
         <!-- Begin Page Content -->
         <div class="container-fluid">
 <div class="container">
@@ -137,7 +139,7 @@
             <input type="url" class="form-control" id="downloadlink" readonly>
             <span class="input-group-btn">
       &ensp;
-        <a window.location.href = "<?= $downloadLink ?"><button id="downloadbtn" class="btn btn-success" type="button" data-href="#downloadlink" disabled>Download</button></a>
+        <a window.location.href = "<?= $downloadLink ?"><button id="downloadbtn" class="btn btn-success" type="button" data-href="#downloadlink" disabled>Download</button></a></td>
       <button id="copylinkbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink"  disabled>Copy link</button>
 
       </span>
