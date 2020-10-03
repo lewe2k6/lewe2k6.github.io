@@ -120,10 +120,7 @@
 
         </nav>
         <!-- End of Topbar -->
-                                <?php
-                                    $downloadUrl = '#downloadLink';
-                                ?>
-        <!-- Begin Page Content -->
+                                        <!-- Begin Page Content -->
         <div class="container-fluid">
 <div class="container">
   <div class="panel panel-default panel-primary" id="mainpanel">
@@ -138,7 +135,9 @@
           <div class="input-group">
             <input type="url" class="form-control" id="downloadlink" readonly>
             <span class="input-group-btn">
-      &ensp;
+      &ensp;<?php
+                                    $downloadUrl = '#downloadLink';
+                                ?>
         <a href = "<?= $downloadUrl ?"><button id="downloadbtn" class="btn btn-success" type="button" data-href="#downloadlink" disabled>Download</button></a>
       <button id="copylinkbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink"  disabled>Copy link</button>
 
