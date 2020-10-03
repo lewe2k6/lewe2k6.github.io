@@ -136,7 +136,7 @@
           <div class="input-group">
             <input type="url" class="form-control" id="downloadlink" readonly>
             <script>
-function myFunction() {
+function copylink() {
   var copyText = document.getElementById("sharelink");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
@@ -146,9 +146,9 @@ function myFunction() {
 </script>
             <span class="input-group-btn">
       &ensp;
-        <a window.location.href = downloadLink><button id="downloadbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink" disabled>Download</button></a>
+        <button id="downloadbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink" disabled>Download</button></a>
       <button id="copylinkbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink"  disabled>Copy link</button>
-      <button onclick="myFunction()">Copy text</button>
+      <button onclick="copylink()" class="btn btn-success" type="button" disabled>Copy link</button>
 
       </span>
           </div>
