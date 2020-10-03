@@ -135,10 +135,20 @@
           <label for="downloadlink">Link download trực tiếp</label>
           <div class="input-group">
             <input type="url" class="form-control" id="downloadlink" readonly>
+            <script>
+function myFunction() {
+  var copyText = document.getElementById("sharelink");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
             <span class="input-group-btn">
       &ensp;
         <a window.location.href = downloadLink><button id="downloadbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink" disabled>Download</button></a>
       <button id="copylinkbtn" class="btn btn-success" type="button" data-clipboard-target="#downloadlink"  disabled>Copy link</button>
+      <button onclick="myFunction()">Copy text</button>
 
       </span>
           </div>
