@@ -201,6 +201,7 @@ if ('storage' in navigator && 'estimate' in navigator.storage) {
 	if(quota < 120000000){
         alert('Trang web này an toàn, không cần dùng ẩn danh đâu bạn ơi!')
         console.log('Trinh duyet An Danh!')
+        window.close();
     }} else {
 	console.log('Khong the phat hien')
 }
