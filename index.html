@@ -192,7 +192,25 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+<script async>
+async function start() {
+if ('storage' in navigator && 'estimate' in navigator.storage) {
+	const {usage, quota} = await navigator.storage.estimate();
+    console.log(`Using ${usage} out of ${quota} bytes.`);
 
+	if(quota < 120000000){
+        alert('Trinh duyet An Danh!')
+        console.log('Trinh duyet An Danh!')
+    } else {
+        alert('Trinh duyet binh thuong!')
+        console.log('Trinh duyet binh thuong')
+    }	
+} else {
+	console.log('Khong the phat hien')
+}
+}
+start();
+</script>
 </body>
 
 </html>
