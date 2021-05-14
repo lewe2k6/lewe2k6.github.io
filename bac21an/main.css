@@ -1,0 +1,38 @@
+body, input {
+    color: #fff;
+    font-family: Lato, sans-serif;
+    font-size: 18pt;
+  }
+  body {
+    background: #222;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    height: 100vh;
+  }
+  form {
+    width: 300px;
+  }
+  input[type=number] {
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid #fff;
+      text-align: right;
+      -webkit-appearance: none;
+      width: 50px;
+  }
+  @media screen and (min-width: 600px) {
+    body, input {
+       font-size: 24pt;
+    }
+    form {
+      margin: auto;
+      width: 480px;
+    }
+    input[type=number] {
+      width: 75px;
+    }
+  }
