@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Drawing Online</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.bigcolorpicker.js"></script>
+	<script src="js/draw.js"></script>
+	<script src="js/storage.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="css/canvas.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery.bigcolorpicker.css" type="text/css" />
+</head>
+<body>
+<div id="draw">
+
+		<div id="logo">Lewe2k6</div>
+
+		<ul class="draw_controller cf">
+			<li class="normal pencil" title="Pencil"></li>
+			<li class="normal handwriting" title="Handwriting"></li>
+			<li class="normal line showLine" title="Line Size"></li>
+			<li class="normal showColor" id="chooseColor" title="Choose Color"></li>
+			<li class="normal rubber" title="Rubber"></li>
+
+			<span>|</span>
+
+			<li class="normal drawLine" title="Draw Line"></li>
+			<li class="normal square" title="Square"></li>
+			<li class="normal circle" title="Circle"></li>
+			<li class="normal fill" title="Fill Color"></li>
+
+			<span>|</span>
+
+			<li class="normal cancel" title="Cancel"></li>
+			<li class="normal next" title="Next"></li>
+			<li class="normal clearContext" title="Clear"></li>
+			<li class="normal save" title="Save"></li>
+			<li class="normal downloadImage" title="Download Image"><a href="#" download="lewedraw.png" id="downloadImage_a"></a></li>
+		</ul>
+
+
+		<div class="canvas_container">
+			<canvas id="canvas">
+				Trình duyệt không hỗ trợ
+			</canvas>
+
+			<canvas id="canvas_bak"></canvas>
+		</div>
+		<p class="tip">Tips: you can drop file here to edit</p>
+
+		<div id="showHistory" class="cf">
+			<h2>Saved pictures</h2>
+		</div>
+
+		<div id="line_size" class="line_size normal">
+			<ul>
+				<!-- <li><button data-value="0.5" class="small"><span style="width: 1px; height: 1px;"></span></button></li> -->
+				<li><button data-value="1" class="small current"><span style="width: 2px; height: 2px;"></span></button></li>
+				<!-- <li><button data-value="2" class="small"><span style="width: 3px; height: 3px;"></span></button></li> -->
+				<li><button data-value="3" class="small selected"><span style="width: 4px; height: 4px;"></span></button></li>
+				<!-- <li><button data-value="4"><span style="width: 6px; height: 6px;"></span></button></li> -->
+				<li><button data-value="5"><span style="width: 8px; height: 8px;"></span></button></li>
+				<li><button data-value="7"><span style="width: 10px; height: 10px;"></span></button></li>
+				<!-- <li><button data-value="9"><span style="width: 12px; height: 12px;"></span></button></li> -->
+				<!-- <li><button data-value="16"><span style="width: 16px; height: 16px;"></span></button></li> -->
+				<!-- <li><button data-value="32" class="large"><span style="width: 28px; height: 28px;"></span></button></li> -->
+			</ul>
+		</div>
+
+	</div>
+</body>
+</html>
