@@ -79,20 +79,27 @@
   </div>
 
   <script>
-    function saveFile(f) {
-      const file = f.files[0];
+    function saveDataAndFile(formData, file) {
       const fr = new FileReader();
       fr.onload = function (e) {
         const obj = {
           filename: file.name,
           mimeType: file.type,
-          bytes: [...new Int8Array(e.target.result)]
+          bytes: [...new Int8Array(e.target.result)],
+          subject: formData.subject,
+          type: formData.type,
+          teacher: formData.teacher
         };
-        google.script.run.withSuccessHandler(e => console.log(e)).saveFile(obj);
+        google.script.run.withSuccessHandler(alertUploadSuccess).saveDataAndFile(obj);
       };
       fr.readAsArrayBuffer(file);
     }
-
+  
+    function alertUploadSuccess() {
+      alert("Tải lên thành công!");
+      document.getElementById('myForm').reset();
+    }
+  
     function submitForm() {
       event.preventDefault();
       const formData = {
@@ -100,12 +107,11 @@
         type: document.getElementById('type').value,
         teacher: document.getElementById('teacher').value
       };
-      google.script.run.withSuccessHandler(() => {
-        alert("Tải lên thành công!");
-        document.getElementById('myForm').reset();
-      }).saveData(formData);
+      const file = document.getElementById('file').files[0];
+      saveDataAndFile(formData, file);
     }
   </script>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
