@@ -82,7 +82,6 @@
     function saveDataAndFile(formData, file) {
       const allowedExtensions = /(\.doc|\.pdf|\.docx)$/i;
   if (!allowedExtensions.exec(file.name)) {
-    // Hiển thị thông báo nếu tệp không phù hợp
     Swal.fire({
       icon: 'error',
       title: 'Lỗi',
@@ -107,7 +106,11 @@
     }
   
     function alertUploadSuccess() {
-      alert("Tải lên thành công!");
+      Swal.fire({
+      icon: 'success',
+      title: 'Thành công',
+      text: 'Đã tải đề lên ngân hàng đề thi!',
+    });
       document.getElementById('myForm').reset();
     }
   
