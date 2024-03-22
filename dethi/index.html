@@ -15,7 +15,6 @@
             <option value="Toán">Toán</option>
             <option value="Văn">Văn</option>
             <option value="Lý">Lý</option>
-            <!-- Add more subjects if needed -->
         </select><br><br>
         <label for="examType">Choose exam type:</label><br>
         <select id="examType" name="examType">
@@ -31,7 +30,7 @@
             var form = document.getElementById("uploadForm");
             var formData = new FormData(form);
             
-            fetch('https://script.google.com/macros/s/AKfycby2c-SeNQONzPJzjbzKtilvu5J04jDDfeTm1Tdz4uwNy0jqYmS6tGcSi2S2Ixe8z9w9nA/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbw3e5GAd2ZvXNl_mMRwMPkAG6p16tTd1FvIkHprSVXD4fe4q16mGtyeX8bj1zjKTY_r/exec', {
                 method: 'POST',
                 body: formData
             })
