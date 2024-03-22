@@ -1,50 +1,87 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Upload Form</title>
-</head>
-<body>
-    <h2>Upload a File</h2>
-    <form id="uploadForm">
-        <label for="file">Choose a file:</label><br>
-        <input type="file" id="file" name="file"><br><br>
-        <label for="name">Enter your name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="subject">Choose a subject:</label><br>
-        <select id="subject" name="subject">
-            <option value="Toán">Toán</option>
-            <option value="Văn">Văn</option>
-            <option value="Lý">Lý</option>
-            <!-- Add more subjects if needed -->
-        </select><br><br>
-        <label for="examType">Choose exam type:</label><br>
-        <select id="examType" name="examType">
-            <option value="Giữa kì">Giữa kì</option>
-            <option value="Cuối kì">Cuối kì</option>
-            <option value="Thi thử">Thi thử</option>
-        </select><br><br>
-        <button type="button" onclick="submitForm()">Submit</button>
-    </form>
+<!doctype html>
+<html lang="en">
 
-    <script>
-        function submitForm() {
-            var form = document.getElementById("uploadForm");
-            var formData = new FormData(form);
-            
-            fetch('https://script.google.com/macros/s/AKfycbw3e5GAd2ZvXNl_mMRwMPkAG6p16tTd1FvIkHprSVXD4fe4q16mGtyeX8bj1zjKTY_r/exec', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Form submitted successfully!');
-                    form.reset();
-                } else {
-                    alert('Error submitting form!');
-                }
-            })
-            .catch(error => console.error('Error:', error));
-        }
-    </script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+    * {
+      font-family: 'Prompt', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex align-items-center justify-content-center mt-5">
+    <form class="row g-3" id="myForm" onsubmit="submitForm(this)">
+      <h4 class="text-primary text-center">SIMBLE AND FAST UPLOAD FILE TO DRIVE</h4>
+
+       <div class="col-md-4 offset-md-4">
+        <label for="formFile" class="form-label">Tải file lên</label>
+        <input id="file" class="form-control" type="file" onchange="saveFile(this)" required/>
+      </div>
+      
+      <div class="col-md-4 offset-md-4">
+        <label for="fname" class="form-label">Họ và tên</label>
+        <input type="text" class="form-control" id="fname" name="fname" required>
+      </div>
+
+      <div class="col-md-4 offset-md-4">
+        <label for="fname" class="form-label">Số điện thoại</label>
+        <input type="text" class="form-control" id="phone" name="phone" required>
+      </div>
+
+      <div class="col-md-4 offset-md-4">
+        <label for="inputPassword4" class="form-label">Địa chỉ mail</label>
+        <input type="email" class="form-control" id="email" name="email" required> 
+      </div>     
+
+      <div class="col-md-4 offset-md-4">
+        <button type="submit" class="btn btn-primary w-100">LƯU DỮ LIỆU</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    
+ function saveFile(f) {
+      const file = f.files[0];
+      const fr = new FileReader();
+      fr.onload = function (e) {
+        const obj = {
+          filename: file.name,
+          mimeType: file.type,
+          bytes: [...new Int8Array(e.target.result)]
+        };
+        google.script.run.withSuccessHandler(e => console.log(e)).saveFile(obj);
+      };
+      fr.readAsArrayBuffer(file);
+    }
+
+    function submitForm(obj){
+        event.preventDefault()
+        Swal.fire({title:"loading.."})
+        Swal.showLoading()
+        google.script.run.withSuccessHandler(()=>{
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Dữ liệu được ghi thành công!",
+            showConfirmButton: false,
+            timer: 1500
+          });
+          document.getElementById('myForm').reset()
+        }).saveData(obj);
+    }
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
