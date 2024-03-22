@@ -18,38 +18,37 @@
 
 <body>
   <div class="container d-flex align-items-center justify-content-center mt-5">
-    <form class="row g-3" id="myForm" onsubmit="submitForm(this)">
-      <h4 class="text-primary text-center">SIMBLE AND FAST UPLOAD FILE TO DRIVE</h4>
+    <form class="row g-3" id="myForm" onsubmit="submitForm()">
+      <h4 class="text-primary text-center">SIMPLE AND FAST UPLOAD FILE TO DRIVE</h4>
 
-       <div class="col-md-4 offset-md-4">
-        <label for="formFile" class="form-label">Tải file lên</label>
+      <div class="col-md-4 offset-md-4">
+        <label for="formFile" class="form-label">Upload File</label>
         <input id="file" class="form-control" type="file" onchange="saveFile(this)" required/>
       </div>
-      
+
       <div class="col-md-4 offset-md-4">
-        <label for="fname" class="form-label">Họ và tên</label>
+        <label for="fname" class="form-label">Full Name</label>
         <input type="text" class="form-control" id="fname" name="fname" required>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="fname" class="form-label">Số điện thoại</label>
+        <label for="phone" class="form-label">Phone Number</label>
         <input type="text" class="form-control" id="phone" name="phone" required>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="inputPassword4" class="form-label">Địa chỉ mail</label>
-        <input type="email" class="form-control" id="email" name="email" required> 
-      </div>     
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
 
       <div class="col-md-4 offset-md-4">
-        <button type="submit" class="btn btn-primary w-100">LƯU DỮ LIỆU</button>
+        <button type="submit" class="btn btn-primary w-100">SAVE DATA</button>
       </div>
     </form>
   </div>
 
   <script>
-    
- function saveFile(f) {
+    function saveFile(f) {
       const file = f.files[0];
       const fr = new FileReader();
       fr.onload = function (e) {
@@ -63,22 +62,18 @@
       fr.readAsArrayBuffer(file);
     }
 
-    function submitForm(obj){
-        event.preventDefault()
-        Swal.fire({title:"loading.."})
-        Swal.showLoading()
-        google.script.run.withSuccessHandler(()=>{
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Dữ liệu được ghi thành công!",
-            showConfirmButton: false,
-            timer: 1500
-          });
-          document.getElementById('myForm').reset()
-        }).saveData(obj);
+    function submitForm() {
+      event.preventDefault();
+      const formData = {
+        fname: document.getElementById('fname').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value
+      };
+      google.script.run.withSuccessHandler(() => {
+        alert("Data saved successfully!");
+        document.getElementById('myForm').reset();
+      }).saveData(formData);
     }
-
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
