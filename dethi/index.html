@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Form</title>
+</head>
+<body>
+    <h2>Upload a File</h2>
+    <form id="uploadForm">
+        <label for="file">Choose a file:</label><br>
+        <input type="file" id="file" name="file"><br><br>
+        <label for="name">Enter your name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="subject">Choose a subject:</label><br>
+        <select id="subject" name="subject">
+            <option value="Toán">Toán</option>
+            <option value="Văn">Văn</option>
+            <option value="Lý">Lý</option>
+            <!-- Add more subjects if needed -->
+        </select><br><br>
+        <label for="examType">Choose exam type:</label><br>
+        <select id="examType" name="examType">
+            <option value="Giữa kì">Giữa kì</option>
+            <option value="Cuối kì">Cuối kì</option>
+            <option value="Thi thử">Thi thử</option>
+        </select><br><br>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById("uploadForm");
+            var formData = new FormData(form);
+            
+            fetch('https://script.google.com/macros/s/AKfycby2c-SeNQONzPJzjbzKtilvu5J04jDDfeTm1Tdz4uwNy0jqYmS6tGcSi2S2Ixe8z9w9nA/exec', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                    form.reset();
+                } else {
+                    alert('Error submitting form!');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
