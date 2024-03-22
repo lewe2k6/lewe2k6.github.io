@@ -4925,7 +4925,7 @@ const It = /* @__PURE__ */ Lo(sa, [["render", ua]]), fa = `*[data-v-7402c36e],*[
 ], Na = { class: "made-by" }, va = { href: "#" }, Oa = { key: 1 }, wa = {
   key: 2,
   class: "text-center"
-}, xa = { key: 0 }, Va = /* @__PURE__ */ Ho(() => /* @__PURE__ */ R("h2", null, "Whoops. This form has been deleted.", -1)), Da = { class: "made-by center" }, Sa = { href: "https://sheetdb.io?utm_source=snippet&utm_medium=website&utm_campaign=table" }, Ca = { key: 1 }, $a = /* @__PURE__ */ Ho(() => /* @__PURE__ */ R("h2", null, "Whoops. Something went wrong.", -1)), Ia = /* @__PURE__ */ Ho(() => /* @__PURE__ */ R("p", { style: { "margin-bottom": "2em" } }, "Contact the owner or SheetDB team.", -1)), Ta = { class: "made-by center" }, Aa = { href: "https://sheetdb.io?utm_source=snippet&utm_medium=website&utm_campaign=table" }, Pa = {
+}, xa = { key: 0 }, Va = /* @__PURE__ */ Ho(() => /* @__PURE__ */ R("h2", null, "Whoops. This form has been deleted.", -1)), Da = { class: "made-by center" }, Sa = { href: "#" }, Ca = { key: 1 }, $a = /* @__PURE__ */ Ho(() => /* @__PURE__ */ R("h2", null, "Whoops. Something went wrong.", -1)), Ia = /* @__PURE__ */ Ho(() => /* @__PURE__ */ R("p", { style: { "margin-bottom": "2em" } }, "Contact the owner or SheetDB team.", -1)), Ta = { class: "made-by center" }, Aa = { href: "#" }, Pa = {
   __name: "SheetDBForm.ce",
   props: {
     apiId: String,
@@ -5093,13 +5093,13 @@ const La = /* @__PURE__ */ Lo(Ma, [["render", Ua]]), Ha = '*[data-v-321b15f2],*[
   style: { "text-align": "center" }
 }, "No results found", -1)), Qa = [
   Za
-], eu = { class: "made-by" }, tu = { href: "https://sheetdb.io?utm_source=snippet&utm_medium=website&utm_campaign=table" }, ou = { key: 1 }, nu = {
+], eu = { class: "made-by" }, tu = { href: "#" }, ou = { key: 1 }, nu = {
   key: 0,
   class: "text-center"
-}, ru = /* @__PURE__ */ Bo(() => /* @__PURE__ */ R("h2", null, "Whoops. This table has been deleted.", -1)), iu = { class: "made-by center" }, su = { href: "https://sheetdb.io?utm_source=snippet&utm_medium=website&utm_campaign=table" }, lu = {
+}, ru = /* @__PURE__ */ Bo(() => /* @__PURE__ */ R("h2", null, "Whoops. This table has been deleted.", -1)), iu = { class: "made-by center" }, su = { href: "#" }, lu = {
   key: 1,
   class: "text-center"
-}, cu = /* @__PURE__ */ Bo(() => /* @__PURE__ */ R("h2", null, "Whoops. Something went wrong.", -1)), au = /* @__PURE__ */ Bo(() => /* @__PURE__ */ R("p", { style: { "margin-bottom": "2em" } }, "Contact the owner or SheetDB team.", -1)), uu = { class: "made-by center" }, fu = { href: "https://sheetdb.io?utm_source=snippet&utm_medium=website&utm_campaign=table" }, du = {
+}, cu = /* @__PURE__ */ Bo(() => /* @__PURE__ */ R("h2", null, "Whoops. Something went wrong.", -1)), au = /* @__PURE__ */ Bo(() => /* @__PURE__ */ R("p", { style: { "margin-bottom": "2em" } }, "Contact the owner or SheetDB team.", -1)), uu = { class: "made-by center" }, fu = { href: "#" }, du = {
   __name: "SheetDBTable.ce",
   props: {
     apiId: String,
