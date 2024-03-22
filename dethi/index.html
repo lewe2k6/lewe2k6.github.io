@@ -42,8 +42,8 @@
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="url" class="form-label">URL of Exam</label>
-        <input type="url" class="form-control" id="url" name="url" required>
+        <label for="teacher" class="form-label">Name of Teacher</label>
+        <input type="text" class="form-control" id="teacher" name="teacher" required>
       </div>
 
       <div class="col-md-4 offset-md-4">
@@ -72,7 +72,7 @@
       const formData = {
         subject: document.getElementById('subject').value,
         type: document.getElementById('type').value,
-        url: document.getElementById('url').value
+        teacher: document.getElementById('teacher').value
       };
       google.script.run.withSuccessHandler(() => {
         alert("Data saved successfully!");
