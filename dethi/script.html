@@ -19,35 +19,51 @@
 <body>
   <div class="container d-flex align-items-center justify-content-center mt-5">
     <form class="row g-3" id="myForm" onsubmit="submitForm()">
-      <h4 class="text-primary text-center">SIMPLE AND FAST UPLOAD FILE TO DRIVE</h4>
+      <h4 class="text-primary text-center">THPT VĂN LÃNG LẠNG SƠN</h4>
 
       <div class="col-md-4 offset-md-4">
-        <label for="formFile" class="form-label">Upload File</label>
+        <label for="formFile" class="form-label">Chọn tệp</label>
         <input id="file" class="form-control" type="file" onchange="saveFile(this)" required/>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="subject" class="form-label">Subject</label>
-        <input type="text" class="form-control" id="subject" name="subject" required>
+        <label for="type" class="form-label">Môn học</label>
+        <select class="form-select" id="type" name="type" required>
+          <option value="" disabled selected>Chọn môn học</option>
+          <option value="Toán">Toán</option>
+          <option value="Tiếng Anh">Tiếng Anh</option>
+          <option value="Vật Lý">Vật Lý</option>
+          <option value="Hóa">Hóa</option>
+          <option value="Ngữ Văn">Ngữ Văn</option>
+          <option value="Lịch Sử">Lịch Sử</option>
+          <option value="Địa Lí">Địa Lí</option>
+          <option value="Sinh học">Sinh học</option>
+          <option value="Giáo dục công dân">Giáo dục công dân</option>
+          <option value="Công nghệ">Công nghệ</option>
+          <option value="Tin học">Tin học</option>
+        </select>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="type" class="form-label">Exam Type</label>
+        <label for="type" class="form-label">Loại đề</label>
         <select class="form-select" id="type" name="type" required>
-          <option value="" disabled selected>Choose Exam Type</option>
-          <option value="Giữa kì">Giữa kì</option>
-          <option value="Cuối kì">Cuối kì</option>
+          <option value="" disabled selected>Chọn loại đề</option>
+          <option value="Giữa kì">Thường xuyên</option>
+          <option value="Giữa kì">Giữa kì I</option>
+          <option value="Cuối kì">Cuối kì I</option>
+          <option value="Giữa kì">Giữa kì II</option>
+          <option value="Cuối kì">Cuối kì II</option>
           <option value="Thi thử">Thi thử</option>
         </select>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="teacher" class="form-label">Name of Teacher</label>
+        <label for="teacher" class="form-label">Tên giáo viên</label>
         <input type="text" class="form-control" id="teacher" name="teacher" required>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <button type="submit" class="btn btn-primary w-100">SAVE DATA</button>
+        <button type="submit" class="btn btn-primary w-100">TẢI LÊN</button>
       </div>
     </form>
   </div>
@@ -75,7 +91,7 @@
         teacher: document.getElementById('teacher').value
       };
       google.script.run.withSuccessHandler(() => {
-        alert("Data saved successfully!");
+        alert("Tải lên thành công!");
         document.getElementById('myForm').reset();
       }).saveData(formData);
     }
