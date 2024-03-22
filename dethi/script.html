@@ -80,6 +80,17 @@
 
   <script>
     function saveDataAndFile(formData, file) {
+      const allowedExtensions = /(\.doc|\.pdf|\.docx)$/i;
+  if (!allowedExtensions.exec(file.name)) {
+    // Hiển thị thông báo nếu tệp không phù hợp
+    Swal.fire({
+      icon: 'error',
+      title: 'Lỗi',
+      text: 'Chỉ chấp nhận các tệp có phần mở rộng .doc, .pdf, hoặc .docx.',
+    });
+    return;
+  }
+
       const fr = new FileReader();
       fr.onload = function (e) {
         const obj = {
