@@ -27,18 +27,23 @@
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="fname" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="fname" name="fname" required>
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" name="subject" required>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input type="text" class="form-control" id="phone" name="phone" required>
+        <label for="type" class="form-label">Exam Type</label>
+        <select class="form-select" id="type" name="type" required>
+          <option value="" disabled selected>Choose Exam Type</option>
+          <option value="Giữa kì">Giữa kì</option>
+          <option value="Cuối kì">Cuối kì</option>
+          <option value="Thi thử">Thi thử</option>
+        </select>
       </div>
 
       <div class="col-md-4 offset-md-4">
-        <label for="email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" name="email" required>
+        <label for="url" class="form-label">URL of Exam</label>
+        <input type="url" class="form-control" id="url" name="url" required>
       </div>
 
       <div class="col-md-4 offset-md-4">
@@ -65,9 +70,9 @@
     function submitForm() {
       event.preventDefault();
       const formData = {
-        fname: document.getElementById('fname').value,
-        phone: document.getElementById('phone').value,
-        email: document.getElementById('email').value
+        subject: document.getElementById('subject').value,
+        type: document.getElementById('type').value,
+        url: document.getElementById('url').value
       };
       google.script.run.withSuccessHandler(() => {
         alert("Data saved successfully!");
